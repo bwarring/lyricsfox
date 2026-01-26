@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warring Associates LLC | LyricsFox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 2rem 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            animation: fadeInUp 1s 0.2s backwards;
+        }
+
+        .platform-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s 0.3s backwards;
+        }
+
+        .badge-link {
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+
+        .badge-link:hover {
+            transform: scale(1.05);
+        }
+
+        .badge-link img {
+            height: 60px;
+            width: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .promo-video {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 2rem;
+        }
+
+        .promo-video h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .promo-video p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        .features {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 2rem;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .features-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .highlight-feature {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 2px solid #667eea;
+        }
+
+        .demo-videos {
+            background: #f7fafc;
+            padding: 80px 2rem;
+        }
+
+        .demo-videos h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+        }
+
+        .demo-videos-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .demo-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .demo-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .demo-card iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+
+        .demo-card-content {
+            padding: 1.5rem;
+        }
+
+        .demo-card h3 {
+            font-size: 1.3rem;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .more-features {
+            text-align: center;
+            padding: 2rem;
+            background: #f7fafc;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+
+        .more-features h3 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .more-features p {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .about {
+            background: white;
+            padding: 80px 2rem;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2d3748;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-container iframe {
+                height: 300px;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Warring Associates LLC</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#promo">Video</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demos">Demos</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Introducing LyricsFox</h1>
+        <p>The complete hands-free lyrics solution for performers and music professionals</p>
+        
+        <div class="platform-badges">
+            <a href="#" class="badge-link" aria-label="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+            </a>
+            <a href="#" class="badge-link" aria-label="Get it on Google Play">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+            </a>
+        </div>
+        
+        <a href="#promo" class="cta-button">Watch Video</a>
+    </section>
+
+    <section id="promo" class="promo-video">
+        <h2>Why Choose LyricsFox?</h2>
+        <p>See how LyricsFox transforms your performance experience</p>
+        <div class="video-container">
+            <iframe src="https://drive.google.com/file/d/1Hh4qlIYEl-3KrvWS7y153m9GdZTfYZPy/preview" allow="autoplay"></iframe>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>Powerful Features for Performers</h2>
+        <p class="features-subtitle">Everything you need to manage and perform with lyrics, completely hands-free</p>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎵</div>
+                <h3>Find & Import Lyrics</h3>
+                <p>Instantly search and import song lyrics from an extensive database. Access thousands of songs with just a few taps, building your perfect lyric library.</p>
+            </div>
+            
+            <div class="feature-card highlight-feature">
+                <div class="feature-icon">🎮</div>
+                <h3>Bluetooth Pedal Control</h3>
+                <p>Connect seamlessly to your AirTurn DUO 500 pedal device. Control everything hands-free while you perform, keeping your focus on the music.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Arrange Song Sets</h3>
+                <p>Organize your songs into custom setlists for different performances. Manage multiple sets with ease and switch between them instantly.</p>
+            </div>
+
+            <div class="feature-card highlight-feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Smart Scroll Control</h3>
+                <p>Auto-scroll through lyrics at your preferred speed. Adjust the pace on-the-fly using your Bluetooth pedal—faster or slower to match your performance perfectly.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">✏️</div>
+                <h3>Edit Lyrics</h3>
+                <p>Customize lyrics to match your version of the song. Make corrections, add notes, or adjust formatting to suit your performance style.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📤</div>
+                <h3>Export Capabilities</h3>
+                <p>Share your curated lyrics and setlists. Export your work for backup, collaboration, or use across multiple devices.</p>
+            </div>
+        </div>
+
+        <div class="more-features">
+            <h3>And Much More...</h3>
+            <p>LyricsFox is constantly evolving with new features designed specifically for music entertainment professionals. Stay tuned for updates!</p>
+        </div>
+    </section>
+
+    <section id="demos" class="demo-videos">
+        <h2>See LyricsFox in Action</h2>
+        <p class="demo-videos-subtitle">Watch these quick demos to see how easy it is to use LyricsFox</p>
+        
+        <div class="demo-grid">
+            <div class="demo-card">
+                <iframe src="https://drive.google.com/file/d/1aSvO2KvklYeBRhbWEN1tReIvcqP4uPE7/preview" allow="autoplay"></iframe>
+                <div class="demo-card-content">
+                    <h3>Find Lyrics</h3>
+                    <p>Search and import any song from our extensive lyrics database in seconds.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <iframe src="https://drive.google.com/file/d/1XNz-4fazoxT0q7A9yDcVKiG5tTV-4cyu/preview" allow="autoplay"></iframe>
+                <div class="demo-card-content">
+                    <h3>Connect to Bluetooth</h3>
+                    <p>Pair your AirTurn DUO 500 pedal in just a few taps for hands-free control.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <iframe src="https://drive.google.com/file/d/1mGUdOJGYFXhXLyiucLSRRaa8wKTIJYjk/preview" allow="autoplay"></iframe>
+                <div class="demo-card-content">
+                    <h3>Scroll with Pedal</h3>
+                    <p>Control scrolling speed and navigation with your Bluetooth pedal while performing.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <iframe src="https://drive.google.com/file/d/1uL0KCODAN4THcu2rVyoPL5BNW03fU1yB/preview" allow="autoplay"></iframe>
+                <div class="demo-card-content">
+                    <h3>Scroll without Bluetooth</h3>
+                    <p>Auto-scroll feature works perfectly even without a pedal connection.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <iframe src="https://drive.google.com/file/d/1MtoZZ9DbwcEceD-wnCycZRR6hQrIPAG1/preview" allow="autoplay"></iframe>
+                <div class="demo-card-content">
+                    <h3>Manage Sets</h3>
+                    <p>Create and organize custom setlists for all your different performances.</p>
+                </div>
+            </div>
+
+            <div class="demo-card">
+                <iframe src="https://drive.google.com/file/d/1_N_zIgbWhYVR5mI2091BeeTKapVqX-gl/preview" allow="autoplay"></iframe>
+                <div class="demo-card-content">
+                    <h3>In Action</h3>
+                    <p>See how LyricsFox performs in a real-world performance setting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>About Warring Associates LLC</h2>
+            <p>Warring Associates LLC is dedicated to creating innovative solutions for the music entertainment industry. With LyricsFox, we're empowering performers, DJs, karaoke hosts, and music professionals with the tools they need to deliver exceptional performances. Our focus is on hands-free, intuitive technology that lets you concentrate on what matters most—the music.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Warring Associates LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
