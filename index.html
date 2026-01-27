@@ -259,8 +259,9 @@
 
         .demo-card iframe {
             width: 100%;
-            height: 250px;
+            height: 200px;
             border: none;
+            display: block;
         }
 
         .demo-card-content {
@@ -339,29 +340,142 @@
         }
 
         @media (max-width: 768px) {
+            .hero {
+                padding: 100px 1rem 60px;
+            }
+
             .hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+
+            .platform-badges {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .badge-link img {
+                height: 50px;
             }
 
             .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                padding: 0 1rem;
+            }
+
+            .features, .promo-video {
+                padding: 60px 1rem;
+            }
+
+            .features h2, .promo-video h2, .demo-videos h2, .about h2 {
+                font-size: 1.8rem;
+            }
+
+            .features-subtitle, .demo-videos-subtitle, .promo-video p {
+                font-size: 1rem;
+                padding: 0 0.5rem;
             }
 
             .feature-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .video-container {
+                border-radius: 10px;
             }
 
             .video-container iframe {
-                height: 300px;
+                height: 250px;
+            }
+
+            .demo-videos {
+                padding: 60px 1rem;
             }
 
             .demo-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .demo-card iframe {
+                height: 180px;
+            }
+
+            .demo-card-content {
+                padding: 1rem;
+            }
+
+            .demo-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .demo-card p {
+                font-size: 0.9rem;
+            }
+
+            .about {
+                padding: 60px 1rem;
+            }
+
+            .about p {
+                font-size: 1rem;
+            }
+
+            .more-features {
+                padding: 1.5rem;
+            }
+
+            .more-features h3 {
+                font-size: 1.5rem;
+            }
+
+            .more-features p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .nav-links {
+                gap: 0.3rem;
+                font-size: 0.7rem;
+            }
+
+            .video-container iframe {
+                height: 200px;
+            }
+
+            .demo-card iframe {
+                height: 150px;
             }
         }
     </style>
