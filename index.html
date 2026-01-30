@@ -59,11 +59,16 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                        url('https://raw.githubusercontent.com/bwarring/lyricsfox/main/lyrics-fox-hero-01..png') center/contain no-repeat;
+            background-size: cover;
+            background-position: center center;
             color: white;
             padding: 120px 2rem 80px;
             text-align: center;
             margin-top: 60px;
+            position: relative;
+            min-height: 500px;
         }
 
         .hero h1 {
@@ -342,6 +347,7 @@
         @media (max-width: 768px) {
             .hero {
                 padding: 100px 1rem 60px;
+                min-height: 400px;
             }
 
             .hero h1 {
@@ -452,6 +458,10 @@
         }
 
         @media (max-width: 480px) {
+            .hero {
+                min-height: 350px;
+            }
+
             .hero h1 {
                 font-size: 1.5rem;
             }
