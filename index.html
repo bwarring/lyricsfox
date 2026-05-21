@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warring Associates LLC | LyricsFox</title>
-	<link rel="icon" type="image/svg+xml" href="https://bwarring.github.io/lyricsfox/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="https://bwarring.github.io/lyricsfox/favicon.svg">
     <link rel="apple-touch-icon" href="https://bwarring.github.io/lyricsfox/favicon.png">
     <style>
         * {
@@ -27,7 +28,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -62,7 +63,7 @@
 
         .hero {
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
-                        url('https://raw.githubusercontent.com/bwarring/lyricsfox/main/lyrics-fox-hero-01..png') center/contain no-repeat;
+                url('https://raw.githubusercontent.com/bwarring/lyricsfox/main/lyrics-fox-hero-01..png') center/contain no-repeat;
             background-size: cover;
             background-position: center center;
             color: white;
@@ -124,7 +125,7 @@
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
         .promo-video {
@@ -154,7 +155,7 @@
             margin: 0 auto;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
         }
 
         .video-container iframe {
@@ -194,18 +195,23 @@
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
+        }
+
+        .feature-icon svg {
+            width: 48px;
+            height: 48px;
         }
 
         .feature-card h3 {
@@ -255,13 +261,13 @@
             background: white;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .demo-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
         }
 
         .demo-card iframe {
@@ -340,6 +346,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -383,15 +390,21 @@
                 padding: 0 1rem;
             }
 
-            .features, .promo-video {
+            .features,
+            .promo-video {
                 padding: 60px 1rem;
             }
 
-            .features h2, .promo-video h2, .demo-videos h2, .about h2 {
+            .features h2,
+            .promo-video h2,
+            .demo-videos h2,
+            .about h2 {
                 font-size: 1.8rem;
             }
 
-            .features-subtitle, .demo-videos-subtitle, .promo-video p {
+            .features-subtitle,
+            .demo-videos-subtitle,
+            .promo-video p {
                 font-size: 1rem;
                 padding: 0 0.5rem;
             }
@@ -492,6 +505,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -509,16 +523,18 @@
     <section id="home" class="hero">
         <h1>Introducing LyricsFox</h1>
         <p>The complete hands-free lyrics solution for performers and music professionals</p>
-        
+
         <div class="platform-badges">
             <a href="#" class="badge-link" aria-label="Download on the App Store">
-                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                    alt="Download on the App Store">
             </a>
             <a href="#" class="badge-link" aria-label="Get it on Google Play">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                    alt="Get it on Google Play">
             </a>
         </div>
-        
+
         <a href="#promo" class="cta-button">Watch Video</a>
     </section>
 
@@ -526,65 +542,110 @@
         <h2>Why Choose LyricsFox?</h2>
         <p>See how LyricsFox transforms your performance experience</p>
         <div class="video-container">
-            <iframe src="https://drive.google.com/file/d/1Hh4qlIYEl-3KrvWS7y153m9GdZTfYZPy/preview" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1Hh4qlIYEl-3KrvWS7y153m9GdZTfYZPy/preview"
+                allow="autoplay"></iframe>
         </div>
     </section>
 
     <section id="features" class="features">
         <h2>Powerful Features for Performers</h2>
         <p class="features-subtitle">Everything you need to manage and perform with lyrics, completely hands-free</p>
-        
+
         <div class="feature-grid">
             <div class="feature-card">
                 <div class="feature-icon">🎵</div>
                 <h3>Find & Import Lyrics</h3>
-                <p>Instantly search and import song lyrics from an extensive database. Access thousands of songs with just a few taps, building your perfect lyric library.</p>
-            </div>
-            
-            <div class="feature-card highlight-feature">
-                <div class="feature-icon">🎮</div>
-                <h3>Bluetooth Pedal Control</h3>
-                <p>Connect seamlessly to your AirTurn DUO 500 pedal device. Control everything hands-free while you perform, keeping your focus on the music.</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">📋</div>
-                <h3>Arrange Song Sets</h3>
-                <p>Organize your songs into custom setlists for different performances. Manage multiple sets with ease and switch between them instantly.</p>
+                <p>Instantly search and import song lyrics from an extensive database. Access thousands of songs with
+                    just a few taps, building your perfect lyric library.</p>
             </div>
 
             <div class="feature-card highlight-feature">
-                <div class="feature-icon">⚡</div>
-                <h3>Smart Scroll Control</h3>
-                <p>Auto-scroll through lyrics at your preferred speed. Adjust the pace on-the-fly using your Bluetooth pedal—faster or slower to match your performance perfectly.</p>
+                <div class="feature-icon">📋</div>
+                <h3>Arrange Song Sets</h3>
+                <p>Organize your songs into custom setlists for different performances. Manage multiple sets with ease
+                    and switch between them instantly.</p>
             </div>
-            
+
             <div class="feature-card">
                 <div class="feature-icon">✏️</div>
                 <h3>Edit Lyrics</h3>
-                <p>Customize lyrics to match your version of the song. Make corrections, add notes, or adjust formatting to suit your performance style.</p>
+                <p>Customize lyrics to match your version of the song. Make corrections, add notes, or adjust formatting
+                    to suit your performance style.</p>
             </div>
-            
+
+            <div class="feature-card highlight-feature">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <path d="M24 8v32m0-32l10 10-10 10m0 12l10-10-10-10" stroke="#0A57FF" stroke-width="3"
+                            fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3>Bluetooth Pedal Control</h3>
+                <p>Connect seamlessly to your AirTurn DUO 500 pedal device. Control everything hands-free while you
+                    perform, keeping your focus on the music.</p>
+            </div>
+
             <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Smart Scroll Control</h3>
+                <p>Auto-scroll through lyrics at your preferred speed. Adjust the pace on-the-fly using your Bluetooth
+                    pedal—faster or slower to match your performance perfectly.</p>
+            </div>
+
+            <div class="feature-card highlight-feature">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <rect x="8" y="4" width="32" height="40" rx="3" fill="#ffffff" stroke="#d32f2f"
+                            stroke-width="3" />
+                        <text x="24" y="16" font-size="12" font-family="Arial" fill="#d32f2f" text-anchor="middle"
+                            font-weight="bold">PDF</text>
+                        <rect x="12" y="22" width="24" height="2.5" fill="#999" />
+                        <rect x="12" y="28" width="24" height="2.5" fill="#999" />
+                        <rect x="12" y="34" width="18" height="2.5" fill="#999" />
+                    </svg>
+                </div>
+                <h3>Import & Scroll PDF</h3>
+                <p>Import your PDF charts and view them with clarity and control. Zoom in for detail, zoom out for the
+                    big picture, and scroll through your charts with ease during performances.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <path d="M24 4l16 8v12c0 10-7 18-16 20-9-2-16-10-16-20V12l16-8z" fill="#000000" />
+                        <path d="M22 18h6l-4 8h6l-10 12 4-12h-6l4-8z" fill="#ff8c00" />
+                    </svg>
+                </div>
+                <h3>Online Charts</h3>
+                <p>Search and save song charts from Ultimate Guitar. Access thousands of charts with just a few taps.
+                </p>
+            </div>
+
+            <div class="feature-card highlight-feature">
                 <div class="feature-icon">📤</div>
                 <h3>Export Capabilities</h3>
-                <p>Share your curated lyrics and setlists. Export your work for backup, collaboration, or use across multiple devices.</p>
+                <p>Share your curated lyrics and setlists. Export your work for backup, collaboration, or use across
+                    multiple devices.</p>
             </div>
+
         </div>
 
         <div class="more-features">
             <h3>And Much More...</h3>
-            <p>LyricsFox is constantly evolving with new features designed specifically for music entertainment professionals. Stay tuned for updates!</p>
+            <p>LyricsFox is constantly evolving with new features designed specifically for music entertainment
+                professionals. Stay tuned for updates!</p>
         </div>
     </section>
+
 
     <section id="demos" class="demo-videos">
         <h2>See LyricsFox in Action</h2>
         <p class="demo-videos-subtitle">Watch these quick demos to see how easy it is to use LyricsFox</p>
-        
+
         <div class="demo-grid">
             <div class="demo-card">
-                <iframe src="https://drive.google.com/file/d/1aSvO2KvklYeBRhbWEN1tReIvcqP4uPE7/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1aSvO2KvklYeBRhbWEN1tReIvcqP4uPE7/preview"
+                    allow="autoplay"></iframe>
                 <div class="demo-card-content">
                     <h3>Find Lyrics</h3>
                     <p>Search and import any song from our extensive lyrics database in seconds.</p>
@@ -592,7 +653,8 @@
             </div>
 
             <div class="demo-card">
-                <iframe src="https://drive.google.com/file/d/1XNz-4fazoxT0q7A9yDcVKiG5tTV-4cyu/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1XNz-4fazoxT0q7A9yDcVKiG5tTV-4cyu/preview"
+                    allow="autoplay"></iframe>
                 <div class="demo-card-content">
                     <h3>Connect to Bluetooth</h3>
                     <p>Pair your AirTurn DUO 500 pedal in just a few taps for hands-free control.</p>
@@ -600,7 +662,8 @@
             </div>
 
             <div class="demo-card">
-                <iframe src="https://drive.google.com/file/d/1mGUdOJGYFXhXLyiucLSRRaa8wKTIJYjk/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1mGUdOJGYFXhXLyiucLSRRaa8wKTIJYjk/preview"
+                    allow="autoplay"></iframe>
                 <div class="demo-card-content">
                     <h3>Scroll with Pedal</h3>
                     <p>Control scrolling speed and navigation with your Bluetooth pedal while performing.</p>
@@ -608,7 +671,8 @@
             </div>
 
             <div class="demo-card">
-                <iframe src="https://drive.google.com/file/d/1uL0KCODAN4THcu2rVyoPL5BNW03fU1yB/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1uL0KCODAN4THcu2rVyoPL5BNW03fU1yB/preview"
+                    allow="autoplay"></iframe>
                 <div class="demo-card-content">
                     <h3>Scroll without Bluetooth</h3>
                     <p>Auto-scroll feature works perfectly even without a pedal connection.</p>
@@ -616,7 +680,8 @@
             </div>
 
             <div class="demo-card">
-                <iframe src="https://drive.google.com/file/d/1MtoZZ9DbwcEceD-wnCycZRR6hQrIPAG1/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1MtoZZ9DbwcEceD-wnCycZRR6hQrIPAG1/preview"
+                    allow="autoplay"></iframe>
                 <div class="demo-card-content">
                     <h3>Manage Sets</h3>
                     <p>Create and organize custom setlists for all your different performances.</p>
@@ -624,7 +689,8 @@
             </div>
 
             <div class="demo-card">
-                <iframe src="https://drive.google.com/file/d/1_N_zIgbWhYVR5mI2091BeeTKapVqX-gl/preview" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1_N_zIgbWhYVR5mI2091BeeTKapVqX-gl/preview"
+                    allow="autoplay"></iframe>
                 <div class="demo-card-content">
                     <h3>In Action</h3>
                     <p>See how LyricsFox performs in a real-world performance setting.</p>
@@ -636,7 +702,11 @@
     <section id="about" class="about">
         <div class="about-content">
             <h2>About Warring Associates LLC</h2>
-            <p>Warring Associates LLC is dedicated to creating innovative solutions for the music entertainment industry. With LyricsFox, we're empowering performers, DJs, karaoke hosts, and music professionals with the tools they need to deliver exceptional performances. Our focus is on hands-free, intuitive technology that lets you concentrate on what matters most—the music.</p>
+            <p>Warring Associates LLC is dedicated to creating innovative solutions for the music entertainment
+                industry. With LyricsFox, we're empowering performers, DJs, karaoke hosts, and music professionals
+                with
+                the tools they need to deliver exceptional performances. Our focus is on hands-free, intuitive
+                technology that lets you concentrate on what matters most—the music.</p>
         </div>
     </section>
 
@@ -659,4 +729,5 @@
         });
     </script>
 </body>
+
 </html>
